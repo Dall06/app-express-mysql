@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<title>Formulario 1 con Api</title>    
+  </head>
+
+  <body>	
+   	
+   	<div class="container-fluid">
+        <!--Titulo-->
+		<div class="jumbotron">
+			<h1>Formulario 1</h1>
+        </div>
+        <div class="row container-fluid row">
+        <!---->
+            <div class="col-12 col-sm-6">
+                <input placeholder="Id" id="txtId" class="row d-none" value="0"/>
+                <br>
+                <input placeholder="ImgUrl" id="txtImgUrl" class="row d-none" value="0"/>
+                <br>
+                <input placeholder="Nombre" id="txtNombre" class="row" />
+                <br>
+                <input placeholder="CURP" id="txtCurp" class="row">
+                <br>
+                <input placeholder="Telefono" id="txtTelefono" class="row">
+                <br>
+                <select id="selEstadoC" class="row" onchange="selectionC()">
+                    <option>Selecion</option>
+                    <option value="Soltero(a)">Soltero(a)</option>
+                    <option value="Casado(a)">Casado(a)</option>
+                    <option value="Divorciado(a)">Divorciado(a)</option>
+                    <option value="Viudo(a)">Viudo(a)</option>
+                    <option value="Union Libre">Union Libre</option>
+                </select>
+                <br>
+                <input placeholder="Edad" id="txtEdad" class="row">
+                <br>
+                <input type="file" placeholder="Abrir" id="btnImg" class="row">
+                <br>
+                <button onclick="Agregar()" class="btn btn-primary row btn-sm"><h4>Agregar</h4></button><br><br>
+                <button onclick="Actualizar()" class="btn btn-primary row btn-sm"><h4>Actualizar</h4></button><br><br>
+                <!--<button onclick="Eliminar()" class="btn btn-primary row btn-sm"><h4>Eliminar</h4></button><br><br>-->
+            </div>
+            <div class="col-12 col-sm-6 container">
+                <div class="row">
+                    <div class="col">
+                        <h1>Lista de personas</h1>
+                        <br>
+                        <input onchange="Buscar()" placeholder="Buscar" class="row" id="txtBusqueda">
+                        <br>
+                        <button onclick="Reset()" class="btn btn-primary row btn-sm" ><h4>Reset</h4></button>
+                    </div>
+                </div>
+                <br>
+                <div class="row container">
+                    <div class="col" id="blockPersonas">
+                        <div class="row" style="border-style: solid">
+                                <div class="col-4">
+                                    <img alt="*" height="40" width="40" src="https://image.flaticon.com/icons/png/512/16/16363.png">
+                                </div>
+                                <div class="col-8">
+                                    <div class="row">
+                                        <div>
+                                            <img src="" height="20" width="20">
+                                            <b>Nombre: </b><label>Vacio</label>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <img src="https://image.freepik.com/iconos-gratis/telefono-auricular_318-1028.jpg" height="20" width="20">
+                                            <b>Telefono: </b><label id="">Vacio</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div>
+                                            <img src="https://image.flaticon.com/icons/svg/56/56239.svg" height="20" width="20">
+                                            <b>Curp: </b><label id="">Vacio</label>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div>
+                                            <img src="https://cdn3.iconfinder.com/data/icons/wedding-35/512/Anniversary_engagement_heart_ring_rings_valentine_wedding-512.png" height="20" width="20">
+                                            <b>Estado civil: </b><label id="lblEstC">Vacio</label>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <img src="https://www.viscoform.es/wp-content/uploads/2015/07/icon-edad.png" height="20" width="20">
+                                                <b>Edad: </b><label id="">Vacio</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+
+    
+    <script src="js/formulario.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  </body>
+</html>
